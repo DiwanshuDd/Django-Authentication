@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #00c6ff, #0072ff, #7a00ff);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        h1:hover, h2:hover {
+            opacity: 1;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        p:hover {
+            opacity: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-right: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            opacity: 1;
+        }
+
+        /* Bouncing animation */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .welcome-section {
+            animation: bounce 2s ease infinite;
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        /* Adjusting navbar and main content margins for better alignment */
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        /* Adding some padding to sections for better spacing */
+        section {
+            padding-bottom: 20px;
+        }
+
+        /* Selectors, Font Flexibility, Word Wrapping */
+        .container h1, h2, p {
+            font-weight: normal;
+            font-style: italic;
+            word-wrap: break-word;
+        }
+
+        /* Transforming Elements */
+        .welcome-section .btn {
+            transform: rotate(-5deg);
+        }
+
+        /* Text Shadowing */
+        h1, h2, p, .btn {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Rounded Corners */
+        .container, .btn {
+            border-radius: 10px;
+        }
+
+        /* Multiple Backgrounds & Gradient */
+        body {
+            background:
+                linear-gradient(45deg, #ff0000, #ff7300),
+                linear-gradient(-45deg, #00ffe0, #0083ff);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Surveillance App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/features/">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact/">Contact US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <section id="about">
+            <h2>About Surveillance App</h2>
+            <!-- Add about content here -->
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <!-- Add features content here -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <!-- Add contact form or information here -->
+        </section>
+    </div>
+
+    <!-- Welcome Section with Bouncing Animation -->
+    <div class="container mt-4 welcome-section">
+        <h1>Welcome to Our Website</h1>
+        <p>
+            Discover our surveillance app for seamless security monitoring, ensuring safety with advanced features for comprehensive protection and peace of mind.
+        </p>
+        <a href="/login" class="btn">Login</a>
+        <a href="/signup" class="btn">Sign Up</a>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

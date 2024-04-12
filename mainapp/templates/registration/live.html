@@ -1,0 +1,31 @@
+<!-- templates/stream.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTSP Stream</title>
+    <!-- Include the Video.js library -->
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
+</head>
+<body>
+    <div id="video-container">
+        <video id="rtsp-video" class="video-js vjs-default-skin" controls autoplay>
+            <source src="{{ rtsp_url }}" type="application/x-rtsp">
+            Your browser does not support the RTSP stream.
+        </video>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the Video.js player
+            var player = videojs('rtsp-video');
+            // Set the RTSP stream URL
+            player.src({
+                src: '{{ rtsp_url }}',
+                type: 'application/x-rtsp'
+            });
+        });
+    </script>
+</body>
+</html>

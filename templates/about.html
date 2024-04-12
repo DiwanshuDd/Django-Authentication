@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #212121; /* Dark background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: #333; /* Dark container background */
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            color: #007bff; /* Blue heading color */
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 1px; /* Spaced letters */
+            animation: slideInLeft 1s ease-in-out; /* Slide in animation */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify; /* Justified text alignment */
+            animation: fadeIn 1s ease-in-out; /* Fade in animation */
+        }
+
+        /* Additional Styles */
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #007bff;
+            margin-top: 10px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .container p:first-of-type {
+            margin-top: 20px;
+        }
+
+        .container p:last-of-type {
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0;
+            }
+            to {
+                width: 60px;
+            }
+        }
+
+        /* Animation for container */
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: slideUp 1s ease-in-out;
+        }
+
+        /* Styling for links */
+        a {
+            color: #007bff; /* Blue link color */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        a:hover {
+            color: #ffffff; /* White link color on hover */
+        }
+
+        /* New Animation */
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body> 
+
+    <div class="container">
+        <h2>About Page For Surveillance App</h2>
+        <p>
+            Our Django surveillance app ensures <strong>security</strong>, <strong>reliability</strong>, and <strong>user-friendly functionality</strong>. With cutting-edge technology and a dedicated team, we provide top-notch surveillance solutions for your peace of mind.
+        </p>
+        <p>
+            Want to learn more? <a href="#">Contact us</a> today.
+        </p>
+    </div>
+    
+</body>
+</html>

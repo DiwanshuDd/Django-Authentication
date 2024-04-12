@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #3498db, #9b59b6, #f39c12);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #444; /* Change heading color */
+            margin-bottom: 30px;
+        }
+
+        .chart-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff; /* Set background color for chart containers */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+            margin-bottom: 40px;
+            overflow: hidden; /* Ensure rounded corners are visible */
+            transition: transform 0.5s ease-in-out; /* Add transition for hover effect */
+            transform: scale(1); /* Initial scale for animation */
+        }
+
+        .chart-container:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Attendance Graph</h1>
+    
+    <!-- First chart -->
+    <div class="chart-container">
+        <canvas id="attendanceChart1"></canvas>
+    </div>
+
+    <script>
+        // Dummy data for demonstration
+        const labels1 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+        const presentData1 = [20, 25, 22, 23, 24];
+        const absentData1 = [5, 3, 4, 2, 6];
+
+        // Create the first bar graph
+        var ctx1 = document.getElementById('attendanceChart1').getContext('2d');
+        var myChart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: labels1,
+                datasets: [{
+                    label: 'Present',
+                    data: presentData1,
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Absent',
+                    data: absentData1,
+                    backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <!-- Second chart -->
+    <div class="chart-container">
+        <canvas id="attendanceChart2"></canvas>
+    </div>
+
+    <script>
+        // Dummy data for the second graph
+        const labels2 = ['9:00-9:30', '9:30-11:30', 'After 11:30'];
+        const greenData = [{{ green_count }}, {{ yellow_count }}, {{ red_count }}]; // Replace with actual data
+
+        // Create the second bar graph
+        var ctx2 = document.getElementById('attendanceChart2').getContext('2d');
+        var myChart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: labels2,
+                datasets: [{
+                    label: 'Employee Attendance',
+                    data: greenData,
+                    backgroundColor: [
+                        'green',
+                        'yellow',
+                        'red'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+</html>

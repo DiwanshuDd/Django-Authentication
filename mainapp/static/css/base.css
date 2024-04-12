@@ -1,0 +1,373 @@
+/* Reset and General Styling */
+body {
+    
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+}
+
+  
+
+
+ 
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #026efd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0040ff; /* Darker shade of blue on hover */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: normal;
+}
+
+/* Headings */
+h1 {
+    border-bottom: 2px solid #026efd; /* Dark blue underline */
+    padding-bottom: 10px;
+    margin: 20px 0;
+    font-size: 32px; /* Increase font size */
+}
+
+h2 {
+    margin: 30px 0 20px;
+    font-size: 24px; /* Increase font size */
+}
+
+/* Header Styling */
+#header {
+    padding: 20px 100px; /* Increased padding */
+    font-size: 20px;
+    background: #026efd;
+    color: #fff;
+    border-bottom: 10px solid #026efd;
+    overflow: auto;
+}
+
+#header .logo {
+    font-family: 'Muli', sans-serif;
+    float: left;
+    color: #f3f7cc;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+#header ul.menu {
+    list-style: none;
+    float: left;
+    margin-left: 15px; /* Adjusted margin */
+    margin-top: 2%;
+}
+
+#header ul.menu li {
+    float: left;
+    padding: 4px 15px; /* Adjusted padding */
+}
+
+#header ul.menu li.selected a,
+#header ul.menu li.selected a:hover {
+    color: #026efd;
+    font-weight: bold;
+}
+
+#header a {
+    color: #f3f7cc;
+}
+
+#header a:hover {
+    color: #fff;
+}
+
+#header .user {
+    float: right;
+    padding-top: 4px;
+}
+
+/* Content Styling */
+#content {
+    padding: 30px 100px;
+}
+
+form {
+    overflow: auto;
+}
+
+form p {
+    width: 100%;
+    overflow: auto;
+}
+
+label {
+    float: left;
+    clear: both;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+input,
+textarea {
+    clear: both;
+    margin: 0 15px 10px;
+    background: #efefef;
+    border: 0;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+input[type=submit],
+a.button {
+    font-weight: bold;
+    background: #026efd;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.errorlist {
+    color: #cc0033;
+    float: left;
+    clear: both;
+    padding-left: 10px;
+}
+
+.helptext {
+    margin: 0 0 20px 0;
+    color: #aaa;
+    clear: both;
+    float: left;
+    font-size: 13px;
+}
+
+/* Messages Styling */
+ul.messages {
+    margin: 10px 100px;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.messages li {
+    margin: 0;
+    padding: 14px 20px;
+    list-style: none;
+    color: #fff;
+}
+
+ul.messages li a {
+    color: inherit; /* Inherit text color */
+}
+
+ul.messages li a.close {
+    margin: 0;
+    float: right;
+    opacity: 1;
+    border: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Login Form Styling */
+.login-form {
+    float: left;
+    clear: both; /* Added clearfix */
+}/* Reset and General Styling */
+/* body {
+    background-image: url('h.jpg');
+    background-size: cover;
+} */
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #026efd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0040ff; /* Darker shade of blue on hover */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: normal;
+}
+
+/* Headings */
+h1 {
+    border-bottom: 2px solid #026efd; /* Dark blue underline */
+    padding-bottom: 10px;
+    margin: 20px 0;
+    font-size: 32px; /* Increase font size */
+}
+
+h2 {
+    margin: 30px 0 20px;
+    font-size: 24px; /* Increase font size */
+}
+
+/* Header Styling */
+#header {
+    padding: 20px 100px; /* Increased padding */
+    font-size: 20px;
+    background: #026efd;
+    color: #fff;
+    border-bottom: 10px solid #026efd;
+    overflow: auto;
+}
+
+#header .logo {
+    font-family: 'Muli', sans-serif;
+    float: left;
+    color: #f3f7cc;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+#header ul.menu {
+    list-style: none;
+    float: left;
+    margin-left: 15px; /* Adjusted margin */
+    margin-top: 2%;
+}
+
+#header ul.menu li {
+    float: left;
+    padding: 4px 15px; /* Adjusted padding */
+}
+
+#header ul.menu li.selected a,
+#header ul.menu li.selected a:hover {
+    color: #026efd;
+    font-weight: bold;
+}
+
+#header a {
+    color: #f3f7cc;
+}
+
+#header a:hover {
+    color: #fff;
+}
+
+#header .user {
+    float: right;
+    padding-top: 4px;
+}
+
+/* Content Styling */
+#content {
+    padding: 30px 100px;
+}
+
+form {
+    overflow: auto;
+}
+
+form p {
+    width: 100%;
+    overflow: auto;
+}
+
+label {
+    float: left;
+    clear: both;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+input,
+textarea {
+    clear: both;
+    margin: 0 15px 10px;
+    background: #efefef;
+    border: 0;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+input[type=submit],
+a.button {
+    font-weight: bold;
+    background: #026efd;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.errorlist {
+    color: #cc0033;
+    float: left;
+    clear: both;
+    padding-left: 10px;
+}
+
+.helptext {
+    margin: 0 0 20px 0;
+    color: #aaa;
+    clear: both;
+    float: left;
+    font-size: 13px;
+}
+
+/* Messages Styling */
+ul.messages {
+    margin: 10px 100px;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.messages li {
+    margin: 0;
+    padding: 14px 20px;
+    list-style: none;
+    color: #fff;
+}
+
+ul.messages li a {
+    color: inherit; /* Inherit text color */
+}
+
+ul.messages li a.close {
+    margin: 0;
+    float: right;
+    opacity: 1;
+    border: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Login Form Styling */
+.login-form {
+    float: left;
+    clear: both; /* Added clearfix */
+}
+

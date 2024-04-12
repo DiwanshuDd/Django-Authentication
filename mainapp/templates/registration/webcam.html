@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Stream</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1f1f1f; /* Dark gray background */
+            margin: 0;
+            padding: 0;
+            color: #ffffff; /* White text */
+        }
+        .stream-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1600px; /* Increase max-width */
+            margin: 0 auto;
+        }
+        .stream-frame {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Soft shadow effect */
+        }
+        .stream-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* Smooth scale transition */
+        }
+        .stream-frame:hover img {
+            transform: scale(1.05); /* Scale up slightly on hover */
+        }
+        .stream-caption {
+            font-size: 1.2em; /* Increase font size */
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stream-container">
+        <div class="stream-frame">
+            <img id="stream1" src="" alt="Webcam Stream 1">
+            <div class="stream-caption">Stream 1</div>
+        </div>
+        <div class="stream-frame">
+            <img id="stream2" src="" alt="Webcam Stream 2">
+            <div class="stream-caption">Stream 2</div>
+        </div>
+        <div class="stream-frame">
+            <img id="stream3" src="" alt="Webcam Stream 3">
+            <div class="stream-caption">Stream 3</div>
+        </div>
+        <div class="stream-frame">
+            <img id="stream4" src="" alt="Webcam Stream 4">
+            <div class="stream-caption">Stream 4</div>
+        </div>
+        <div class="stream-frame">
+            <img id="stream5" src="" alt="Webcam Stream 5">
+            <div class="stream-caption">Stream 5</div>
+        </div>
+        <div class="stream-frame">
+            <img id="stream6" src="" alt="Webcam Stream 6">
+            <div class="stream-caption">Stream 6</div>
+        </div>
+        <div class="stream-frame">
+            <img id="stream7" src="" alt="Webcam Stream 7">
+            <div class="stream-caption">Stream 7</div>
+        </div>
+        <div class="stream-frame">
+            <img id="stream8" src="" alt="Webcam Stream 8">
+            <div class="stream-caption">Stream 8</div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript code for updating the streams
+        function updateStream(streamId, streamUrl) {
+            var streamElement = document.getElementById(streamId);
+            streamElement.src = '/webcam_stream'; // URL to the Django view
+        }
+        
+        setInterval(function() {
+            updateStream('stream1', '/webcam_stream1');
+            updateStream('stream2', '/webcam_stream2');
+            updateStream('stream3', '/webcam_stream3');
+            updateStream('stream4', '/webcam_stream4');
+            updateStream('stream5', '/webcam_stream5');
+            updateStream('stream6', '/webcam_stream6');
+            updateStream('stream7', '/webcam_stream7');
+            updateStream('stream8', '/webcam_stream8');
+        }, 1000); // Update streams every second
+    </script>
+</body>
+</html>
